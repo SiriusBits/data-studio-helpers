@@ -8,20 +8,20 @@ Also, note that the final value in the `ELSE` condition can be used to return th
 
 Items addressed:
 1. Properly classifying and capitalizing channels :bowtie:
-2. Accounting for misspellings :no_entry:
+2. Accounting for mis-spellings :no_entry:
 3. Accounting for non-standard duplicates and variations :mouse: :hamster: :rabbit:
-4. Using referrer when source is too generic, inaccurate or missing :warning:
+4. Using referrer when source is too generic, inaccurate, or missing :warning:
 5. Lacking other means, if a value for `Campaign` is present, we can infer this is a promotion and adjust the channel accordingly :crystal_ball:
 
 The following placeholders are used to be replaced with relevant values:
-`[Organization Name]`
-`[Platform Name]`
+**`[Organization Name]`**
+**`[Platform Name]`**
 
 ```SQL
 CASE
 WHEN Medium = 'display' AND REGEXP_MATCH(Full Referrer, "[Platform Name]") THEN 'Account Based Advertising'
 WHEN Medium = 'display' THEN 'Display'
-WHEN Medium = 'ds_display' THEN 'Display
+WHEN Medium = 'ds_display' THEN 'Display'
 WHEN Medium = 'banner ad' THEN 'Display'
 WHEN Medium = 'display%' THEN 'Display'
 WHEN Medium = 'aba' THEN 'Account Based Advertising'
