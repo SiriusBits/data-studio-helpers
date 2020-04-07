@@ -7,20 +7,20 @@ When using a `CASE` statement, it is important to order cases by specific to gen
 Also, note that the final value in the `ELSE` condition can be used to return the original value if it doesn't match a condition or a default value. The former can help you determine missing conditions over time.
 
 Items addressed:
-1. Properly classifying and capitalizing channels
-2. Accounting for misspellings
-3. Accounting for non-standard duplicates and variations
-4. Using referrer when source is too generic, inaccurate or missing
-5. Lacking other means, if a value for `Campaign` is present, we can infer this is a promotion and adjust the channel accordingly
+1. Properly classifying and capitalizing channels :bowtie:
+2. Accounting for misspellings :no_entry:
+3. Accounting for non-standard duplicates and variations :mouse: :hamster: :rabbit:
+4. Using referrer when source is too generic, inaccurate or missing :warning:
+5. Lacking other means, if a value for `Campaign` is present, we can infer this is a promotion and adjust the channel accordingly :crystal_ball:
 
 The following placeholders are used to be replaced with relevant values:
 `[Organization Name]`
 `[Platform Name]`
 
-`CASE
+```CASE
 WHEN Medium = 'display' AND REGEXP_MATCH(Full Referrer, "[Platform Name]") THEN 'Account Based Advertising'
 WHEN Medium = 'display' THEN 'Display'
-WHEN Medium = 'ds_display' THEN 'Display'
+WHEN Medium = 'ds_display' THEN 'Display
 WHEN Medium = 'banner ad' THEN 'Display'
 WHEN Medium = 'display%' THEN 'Display'
 WHEN Medium = 'aba' THEN 'Account Based Advertising'
@@ -52,4 +52,4 @@ WHEN Medium = '[Organization Name]' THEN '[Organization Name] Referral'
 WHEN Medium = '[Organization Name]-logo' THEN '[Organization Name] Referral'
 WHEN Medium = 'ahlghert' THEN '[Organization Name] Referral'
 WHEN Medium = 'engage email' THEN '[Organization Name] Email'
-ELSE Medium END` 
+ELSE Medium END```
