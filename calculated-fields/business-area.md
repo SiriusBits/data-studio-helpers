@@ -1,6 +1,6 @@
 # Business Area
 
-This field uses another calculated filed, the [Gated Offer field](https://github.com/SiriusBits/data-studio-helpers/new/master/gated-offer), for it's calculation. This simplifies the aggregation of business area that is already determined in the gated Offer labels. 
+This field uses another calculated filed, the [Gated Offer field](https://github.com/SiriusBits/data-studio-helpers/new/master/calculated-fields/gated-offer.md), for it's calculation. This simplifies the aggregation of business area that is already determined in the gated Offer labels. 
 
 ```SQL
 CASE
