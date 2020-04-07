@@ -17,7 +17,8 @@ The following placeholders are used to be replaced with relevant values:
 `[Organization Name]`
 `[Platform Name]`
 
-```CASE
+```SQL
+CASE
 WHEN Medium = 'display' AND REGEXP_MATCH(Full Referrer, "[Platform Name]") THEN 'Account Based Advertising'
 WHEN Medium = 'display' THEN 'Display'
 WHEN Medium = 'ds_display' THEN 'Display
@@ -52,4 +53,5 @@ WHEN Medium = '[Organization Name]' THEN '[Organization Name] Referral'
 WHEN Medium = '[Organization Name]-logo' THEN '[Organization Name] Referral'
 WHEN Medium = 'ahlghert' THEN '[Organization Name] Referral'
 WHEN Medium = 'engage email' THEN '[Organization Name] Email'
-ELSE Medium END```
+ELSE Medium END
+```
