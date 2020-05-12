@@ -2,7 +2,7 @@
 
 Using event tracking, one method of capturing page data is to use the current URL in the Event Label. This way, when an event is fired, its location can be determined and used for reporting. 
 
-This can then be used to provide friendly values for a gated offer as determeioned by the URL path of the event label. This uses some regualr expression matching. NOTE: **Always** ensure matching goes from specific to general to group niche and specific items higher up. General matching can aggregate left-over items with fewer events. 
+This can then be used to provide friendly values for a gated offer as determined by the URL path of the event label. This uses some regualr expression matching. NOTE: **Always** ensure matching goes from specific to general to group niche and specific items higher up. General matching can aggregate left-over items with fewer events. 
 
 ```SQL
 CASE
