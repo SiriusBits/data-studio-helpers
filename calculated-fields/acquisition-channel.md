@@ -2,7 +2,7 @@
 
 The UTM medium can sometimes lead to messy data and using a combination of regex and case statements can help clean up this field to aggregate in to higher-level channels.
 
-When using a `CASE` statement, it is important to order cases by specific to general as the first conduition to match will be used otherwise. A general rule of thumb is that any `WHEN` that includes multiple conditions should be ordered first.
+When using a `CASE` statement, it is important to order cases by specific to general as the first condition to match will be used otherwise. A general rule of thumb is that any `WHEN` that includes multiple conditions should be ordered first.
 
 Also, note that the final value in the `ELSE` condition can be used to return the original value if it doesn't match a condition or a default value. The former can help you determine missing conditions over time.
 
